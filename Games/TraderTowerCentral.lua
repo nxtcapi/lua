@@ -43,6 +43,7 @@ TDC.AutoClaimChest.Disable = function(self)
     task.cancel(self.Thread)
 end
 
+--// Yes this is just using the games one
 TDC.Autoclicker = { Enabled = false, Thread = nil }
 TDC.Autoclicker.Enable = function(self)
     game:GetService("ReplicatedStorage").Events.ClientClick:FireServer( "Autoclicker" )
@@ -53,7 +54,6 @@ TDC.Autoclicker.Disable = function(self)
 end
 
 TDC.AutoCase = { Enabled = false, Thread = nil, Crate = "Starter", Notify = false }
-
 TDC.AutoCase.Enable = function(self)
     self.Enabled = true
     self.Thread = task.spawn(function()

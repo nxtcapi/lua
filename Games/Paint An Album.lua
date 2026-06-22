@@ -27,7 +27,7 @@ for index, color3 in controller.palette do
         end
     end
     
-    if #unpainted > 0 then
+    if #unpainted > 0 then -- thx claudius for help
         for start_idx = 1, #unpainted, 1500 do
             local batch = {}
             for i = start_idx, math.min(start_idx + 1499, #unpainted) do

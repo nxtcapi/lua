@@ -1,9 +1,10 @@
+local ws = cloneref(game:GetService("Workspace"))
 local rs = cloneref(game:GetService("ReplicatedStorage"))
 local plrs = cloneref(game:GetService("Players"))
 local lp = plrs.LocalPlayer
 
 local canvas
-for _, plot in workspace.AllAlbumCanvases:GetChildren() do
+for _, plot in ws.AllAlbumCanvases:GetChildren() do
     if plot:GetAttribute("Owner") == lp.UserId then
         canvas = plot
         break
